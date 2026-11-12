@@ -1,5 +1,16 @@
 import Anagramas._
 
+lOcPal ( "casa" )
+combinaciones ( lOcPal ( "casa" ) )
+val palabra = "cosa"
+anagramasDePalabra( palabra )
+val frase = List( "cosas", "como", "yo" )
+combinaciones ( lOcFrase ( frase ) )
+anagramasDeFrase ( frase )
+
+
+
+
 // Función auxiliar para validación
 def test[A](nombre: String, obtenido: A, esperado: A): Unit = {
   val exito = obtenido == esperado
