@@ -5,7 +5,7 @@ package object Anagramas {
 
   val diccionario: List[Palabra] = List("cosas", "como", "yo", "y", "ocasos", "cayo", "mocosos", "roca", "moco", "sos",
                                         "carne", "moda", "saco", "cosa", "seco", "coser", "caso", "casa", "coma", "caos",
-                                        "peso", "cama", "carro", "cara", "coro", "caro", "rocoso", "sara", "camaron")
+                                        "peso", "cama", "carro", "cara", "coro", "caro", "rocoso", "sara", "camaron", "palo")
 
 
   def lOcPal(p: Palabra): Ocurrencias = {
