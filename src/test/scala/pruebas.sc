@@ -6,7 +6,7 @@ val frase = List( "cosas", "como", "yo" )
 combinaciones ( lOcFrase ( frase ) )
 anagramasDeFrase ( frase )
 
-
+// CASOS DE PRUEBA PROPIOS
 lOcPal("yo")
 lOcPal("carro")
 lOcPal("ocasos")
@@ -24,7 +24,7 @@ diccionarioPorOcurrencias.get(lOcPal("cosas"))
 diccionarioPorOcurrencias.get(lOcPal("roca"))
 diccionarioPorOcurrencias.get(lOcPal("y"))
 diccionarioPorOcurrencias.get(lOcPal("calvo"))
-diccionarioPorOcurrencias.get(lOcPal("sos"))
+diccionarioPorOcurrencias.get(lOcPal("caso"))
 
 
 anagramasDePalabra("cayo")
@@ -39,7 +39,7 @@ combinaciones(lOcPal("sos"))
 combinaciones(lOcPal("piña"))
 combinaciones(lOcFrase(List("roca", "moco")))
 combinaciones(lOcFrase(List("sos", "sos")))
-combinaciones(lOcFrase(List("como", "cosas")))
+combinaciones(lOcFrase(List("yo", "como", "roca")))
 
 
 complemento(lOcPal("cosas"), lOcPal("sos"))
@@ -56,4 +56,7 @@ anagramasDeFrase(List("pizza"))
 anagramasDeFrase(List("saco", "moco", "y", "carne"))
 
 
+// CASOS DE PRUEBA GENERADOS POR LA IA
+// ...
 
+// Se nos olvidó y al final no los hicimos debido a falta de tiempo.

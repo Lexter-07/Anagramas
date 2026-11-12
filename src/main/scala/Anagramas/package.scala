@@ -1,13 +1,23 @@
+
+/**
+ * TALLER 4. Uso de colecciones y Expresiones For
+ *
+ * @author Jorge Luis Castro Scarpetta - 2517065
+ * @author Andres Felipe Rodríguez García - 2539555
+ */
+
 package object Anagramas {
+
   type Palabra = String
   type Frase = List[Palabra]
   type Ocurrencias = List[(Char, Int)]
 
-  val diccionario: List[Palabra] = List("cosas", "como", "yo", "y", "ocasos", "cayo", "mocosos", "roca", "moco", "sos",
+  // Diccionario con el que se tendran en cuenta los anagramas.
+  val diccionario: List[Palabra] = List("cosas", "como", "yo", "y", "ocasos", "cayo", "mocosos", "roca", "moco", "sos", "amor",
                                         "carne", "moda", "saco", "cosa", "seco", "coser", "caso", "casa", "coma", "caos",
                                         "peso", "cama", "carro", "cara", "coro", "caro", "rocoso", "sara", "camaron", "palo")
 
-
+  // genera y ordena las listas de ocurrencias de cada palabra dada
   def lOcPal(p: Palabra): Ocurrencias = {
     p.groupBy(identity)
       .map { case (c, str) => (c, str.length) }
@@ -15,12 +25,12 @@ package object Anagramas {
       .sortBy(_._1)
   }
 
-
+  // Lo mismo pero con frases. Varias palabras
   def lOcFrase(f: Frase): Ocurrencias = {
     lOcPal(f.mkString)
   }
 
-
+  // Las Palabras del diccionario asociadas entre sí
   lazy val diccionarioPorOcurrencias: Map[Ocurrencias, List[Palabra]] = {
     diccionario.groupBy(lOcPal)
   }
